@@ -16,10 +16,16 @@ namespace BattleshipProject
         public Fleet fleet;
 
         // constructor
-        public Player(string name)
+        public Player()
         {
-            Name = name;
+            Name = "Player";
             Score = 0;
+        }
+
+        public void SetPlayerName()
+        {
+            Console.WriteLine("Please enter your name!");
+            Name = Console.ReadLine();
         }
 
         // member methods (CAN DO)

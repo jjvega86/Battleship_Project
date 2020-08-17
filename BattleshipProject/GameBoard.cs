@@ -12,7 +12,7 @@ namespace BattleshipProject
         // 2d array 21 * 21
         //  includes both labels A-J, 1-10 and the game spaces themselves
 
-        string[,] board;
+        public string[,] board;
 
         public GameBoard()
         {
@@ -29,7 +29,7 @@ namespace BattleshipProject
                 board[0, i] = string.Concat(i);
 
             }
-            // How do I "walk" the alphabet every time i increments?
+
             for (int i = 1; i < 11; i++)// sets row labels A-J
             {
                 char letter = 'A';
@@ -47,12 +47,13 @@ namespace BattleshipProject
 
             }
         }
-        // constructor
-        //  sets default values equal to "O" or a placeholder value
-        //  sets lables equal to A-J (horizontal) and 1-10 (vertical)
 
-        // member methods (CAN DO)
-        //  Print the current board
-        //  Print the other player's board (attempted hits, hits, destroyed ships)
+        public abstract void PrintBoard();
+        // forces child classes to write their own unique printboard logic
+        // ActiveBoard should print everything, StatusBoard should print everything minus ship locations
+      
+       
+
+       
     }
 }

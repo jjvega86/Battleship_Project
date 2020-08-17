@@ -16,5 +16,15 @@ namespace BattleshipProject
         // constructor
 
         // member methods (CAN DO)
+
+        public override void PrintBoard()
+        {
+            for (int i = 0; i < board.Length; i++)
+            {
+                Console.WriteLine(board[i,i]);
+            }
+
+        }
+
     }
 }

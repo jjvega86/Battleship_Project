@@ -13,14 +13,15 @@ namespace BattleshipProject
         // fleet status. Once a player's fleet is empty, game is over
         // could create a counter of some type and boolean check if equals zero
 
-        public Game()
+        public Game()// method will initialize values here
+
         {
-            // method will initialize values here
         }
 
-        public void RunGame()
+        public void RunGame()// orchestrator method, all other Game methods will go here
+
         {
-            // orchestrator method, all other Game methods will go here
+            Player1.activeboard.PrintBoard();
         }
 
         public void InitializeValues()
