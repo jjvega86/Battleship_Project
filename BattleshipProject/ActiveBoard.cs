@@ -8,7 +8,7 @@ namespace BattleshipProject
 {
     class ActiveBoard : GameBoard
     {
-        // Full board with ship locations, 
+        // Full board with ship locations and hit attempts 
 
 
         // member variables (DOES HAVE)
