@@ -11,7 +11,8 @@ namespace BattleshipProject
         //member variables (DOES HAVE)
         //score
         //GameBoard
-        //game pieces and a Fleet to hold them
+        //Fleet to hold ships (are these actually classes?)
+        //ship objects
 
         //constructor
 

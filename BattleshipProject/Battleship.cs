@@ -6,15 +6,12 @@ using System.Threading.Tasks;
 
 namespace BattleshipProject
 {
-    class Program
+    class Battleship
     {
-        static void Main(string[] args)
-        {
-            Game game = new Game();
-            game.RunGame();
+        //member variables (DOES HAVE)
 
+        //constructor
 
-
-    }
+        //member methods (CAN DO)
     }
 }

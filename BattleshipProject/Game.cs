@@ -11,6 +11,7 @@ namespace BattleshipProject
         Player player1;
         Player player2;
         //fleet status. Once a player's fleet is empty, game is over
+        //could create a counter of some type and boolean check if equals zero
 
         public Game()
         {
