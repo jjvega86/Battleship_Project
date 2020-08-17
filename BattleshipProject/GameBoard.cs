@@ -57,8 +57,7 @@ namespace BattleshipProject
             }
 
         }
-        // forces child classes to write their own unique printboard logic
-        // ActiveBoard should show everything, StatusBoard should show everything minus ship locations
+        
 
 
 

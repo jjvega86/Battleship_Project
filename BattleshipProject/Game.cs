@@ -25,6 +25,8 @@ namespace BattleshipProject
             Player1.SetPlayerName();
             Player1.SetShipLocations();
             Player1.ActiveBoard.PrintBoard();
+            Player1.ChooseHitLocation(Player1.ActiveBoard);
+            Player1.ActiveBoard.PrintBoard();
 
 
         }
@@ -37,6 +39,17 @@ namespace BattleshipProject
         public void GameIntroduction()
         {
             // welcome and rules here
+        }
+
+
+        public void DeclareWinner()
+        {
+
+        }
+
+        public void ReplayGame()
+        {
+
         }
     }
 }

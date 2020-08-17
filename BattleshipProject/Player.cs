@@ -44,7 +44,7 @@ namespace BattleshipProject
         }
 
         public void ValidateShipLocation(int row, int column)
-        {
+        { 
             if (ActiveBoard.Board[row,column] != "- ")
             {
                 Console.WriteLine("Please try again!");
@@ -64,15 +64,18 @@ namespace BattleshipProject
             Name = Console.ReadLine();
         }
 
-        public void ChooseHitLocation()
+        public void ChooseHitLocation(ActiveBoard activeBoard)
         {
+            Console.WriteLine("Choose where you want to hit!");
+            Console.WriteLine("Pick row:");
+            rowSelection = int.Parse(Console.ReadLine());
+            Console.WriteLine("Pick column:");
+            columnSelection = int.Parse(Console.ReadLine());
+            activeBoard.Board[rowSelection, columnSelection] = "X";
 
         }
 
-        public void MoveShip()
-        {
-
-        }
+        
        
     }
 }

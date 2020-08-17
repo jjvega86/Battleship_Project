@@ -11,7 +11,7 @@ namespace BattleshipProject
         public Submarine()
         {
             Name = "Submarine";
-            ShipSpaces = new string[] { "X ", "X ", "X " };
+            ShipSpaces = new string[] { "> ", "> ", "> " };
         }
     }
 }
