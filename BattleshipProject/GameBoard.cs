@@ -12,11 +12,11 @@ namespace BattleshipProject
         // 2d array 21 * 21
         //  includes both labels A-J, 1-10 and the game spaces themselves
 
-        public string[,] board;
+        public string[,] Board;
 
         public GameBoard()
         {
-            board = new string[21, 21]; // [rows, columns]
+            Board = new string[21, 21]; // [rows, columns]
             InitializeBoardLabelValues();
             InitializeBoardValues();
         }
@@ -26,14 +26,14 @@ namespace BattleshipProject
             // The "0,0" index should not print any value
             for (int i = 1; i < 11; i++)// sets column labels 1-10
             {
-                board[0, i] = string.Concat(i);
+                Board[0, i] = string.Concat(i);
 
             }
 
             for (int i = 1; i < 11; i++)// sets row labels A-J
             {
                 char letter = 'A';
-                board[i, 0] = string.Concat(letter);
+                Board[i, 0] = string.Concat(letter);
                 letter++;
 
             }
@@ -43,7 +43,7 @@ namespace BattleshipProject
         {
             for (int i = 1; i < 11; i++)
             {
-                board[i, i] = "-";
+                Board[i, i] = "-";
 
             }
         }

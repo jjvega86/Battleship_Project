@@ -12,6 +12,7 @@ namespace BattleshipProject
         {
             Game game = new Game();
             game.RunGame();
+            Console.ReadLine();
 
     }
     }

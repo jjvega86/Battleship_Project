@@ -8,13 +8,13 @@ namespace BattleshipProject
 {
     public abstract class Ship
     {
-        public string[] shipSpaces;
-        public bool destroyedStatus;
+        public string[] ShipSpaces;
+        public bool DestroyedStatus;
 
         public Ship()
         {
-            shipSpaces = new string[0];
-            destroyedStatus = false;
+            ShipSpaces = new string[0];
+            DestroyedStatus = false;
         }
 
     }

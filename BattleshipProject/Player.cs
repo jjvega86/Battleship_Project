@@ -11,15 +11,17 @@ namespace BattleshipProject
     {
         public int Score;
         public string Name;
-        public ActiveBoard activeboard;
-        public StatusBoard statusboard;
-        public Fleet fleet;
+        public ActiveBoard ActiveBoard;
+        public StatusBoard StatusBoard;
+        public ShipFleet Fleet;
 
-        // constructor
         public Player()
         {
             Name = "Player";
             Score = 0;
+            ActiveBoard = new ActiveBoard();
+            StatusBoard = new StatusBoard();
+            Fleet = new ShipFleet();
         }
 
         public void SetPlayerName()
@@ -28,10 +30,15 @@ namespace BattleshipProject
             Name = Console.ReadLine();
         }
 
-        // member methods (CAN DO)
-        //  choose location to hit
-        //  see own board
-        //  check other player's board for hits and destroyed ships
-        //  move ships around board without overlapping 
+        public void ChooseHitLocation()
+        {
+
+        }
+
+        public void MoveShip()
+        {
+
+        }
+       
     }
 }

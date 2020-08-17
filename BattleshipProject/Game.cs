@@ -10,21 +10,21 @@ namespace BattleshipProject
     {
         public Player Player1;
         public Player Player2;
-        // fleet status. Once a player's fleet is empty, game is over
-        // could create a counter of some type and boolean check if equals zero
 
-        public Game()// method will initialize values here
+        public Game()// method will initialize values here for game replay logic
 
         {
+            Player1 = new Player();
+            Player2 = new Player();
         }
 
         public void RunGame()// orchestrator method, all other Game methods will go here
 
         {
-            Player1.activeboard.PrintBoard();
+            Player1.ActiveBoard.PrintBoard();
         }
 
-        public void InitializeValues()
+        public void InitializeValues()// initialize constructor to reset member variable values
         {
 
         }

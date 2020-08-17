@@ -8,20 +8,15 @@ namespace BattleshipProject
 {
     class ActiveBoard : GameBoard
     {
-        // Full board with ship locations and hit attempts 
-
-
-        // member variables (DOES HAVE)
-
-        // constructor
-
-        // member methods (CAN DO)
-
         public override void PrintBoard()
-        {
-            for (int i = 0; i < board.Length; i++)
+        {            
+            for (int row = 0; row < Board.GetLength(0); row++)
             {
-                Console.WriteLine(board[i,i]);
+                for (int column = 0; column < Board.GetLength(1); column++)
+                {
+                    Console.WriteLine(Board[row, column]);
+
+                }
             }
 
         }

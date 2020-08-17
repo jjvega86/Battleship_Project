@@ -10,7 +10,7 @@ namespace BattleshipProject
     {
         public AircraftCarrier()
         {
-            shipSpaces = new string[4];
+            ShipSpaces = new string[4];
         }
     }
 }
