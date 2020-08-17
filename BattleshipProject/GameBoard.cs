@@ -37,7 +37,6 @@ namespace BattleshipProject
             {
                 Board[i, 0] = string.Concat(letter);
                 letter++;
-
             }
         }
 
