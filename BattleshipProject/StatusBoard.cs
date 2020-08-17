@@ -10,11 +10,7 @@ namespace BattleshipProject
     {
         //partial board with destroyed ship locations, hit attempts, hit successes
 
-        public override void PrintBoard()
-        {
-           
-            throw new NotImplementedException();
-        }
+        
     }
 
     

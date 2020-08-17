@@ -13,7 +13,7 @@ namespace BattleshipProject
         public string Name;
         public ActiveBoard ActiveBoard;
         public StatusBoard StatusBoard;
-        public ShipFleet Fleet;
+        public ShipFleet armada;
 
         public Player()
         {
@@ -21,12 +21,22 @@ namespace BattleshipProject
             Score = 0;
             ActiveBoard = new ActiveBoard();
             StatusBoard = new StatusBoard();
-            Fleet = new ShipFleet();
+            armada = new ShipFleet();
         }
 
         public void SetShipLocations()
         {
-            
+            for (int i = 0; i < armada.Fleet.Length; i++)
+            {
+                Console.WriteLine($"Please pick a spot for your {armada.Fleet[i].Name}!");
+                Console.WriteLine("Pick row:");
+                int row = int.Parse(Console.ReadLine());
+                Console.WriteLine("Pick column:");
+                int column = int.Parse(Console.ReadLine());
+                ActiveBoard.Board[row, column] = armada.Fleet[i];
+
+            }
+
 
         }
 

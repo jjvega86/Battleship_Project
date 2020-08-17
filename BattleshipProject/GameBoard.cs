@@ -52,12 +52,24 @@ namespace BattleshipProject
             }
         }
 
-        public abstract void PrintBoard();
+        public virtual void PrintBoard()
+        {
+            for (int row = 0; row < Board.GetLength(0); row++)
+            {
+                for (int column = 0; column < Board.GetLength(1); column++)
+                {
+                    Console.Write(Board[row, column]);
+
+                }
+                Console.WriteLine("");
+            }
+
+        }
         // forces child classes to write their own unique printboard logic
         // ActiveBoard should show everything, StatusBoard should show everything minus ship locations
-      
-       
 
-       
+
+
+
     }
 }
