@@ -11,9 +11,6 @@ namespace BattleshipProject
         public Submarine()
         {
             shipSpaces = new string[2];
-
         }
-
-       
     }
 }

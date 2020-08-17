@@ -12,9 +12,5 @@ namespace BattleshipProject
         {
             shipSpaces = new string[1];
         }
-
-        // constructor
-
-        // member methods (CAN DO)
     }
 }

@@ -8,12 +8,14 @@ namespace BattleshipProject
 {
     class Fleet
     {
-        // member variables (DOES HAVE)
-        //  List of ships
-        //  status (List empty or full)
+        public Ship[] fleet;
+        public bool emptyStatus; // is the fleet empty? True or false.
 
-        // constructor
-
-        // member methods (CAN DO)
+        public Fleet()
+        {
+            fleet = new Ship[] {new Destroyer(), new Submarine(), new Battleship(), new AircraftCarrier()}; 
+            emptyStatus = false;
+        }
+        
     }
 }

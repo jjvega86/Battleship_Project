@@ -11,8 +11,6 @@ namespace BattleshipProject
         public AircraftCarrier()
         {
             shipSpaces = new string[4];
-
         }
-
     }
 }
