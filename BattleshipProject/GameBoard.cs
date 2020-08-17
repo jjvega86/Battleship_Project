@@ -32,7 +32,9 @@ namespace BattleshipProject
             // How do I "walk" the alphabet every time i increments?
             for (int i = 1; i < 11; i++)// sets row labels A-J
             {
-                board[i, 0] = string.Concat(i);
+                char letter = 'A';
+                board[i, 0] = string.Concat(letter);
+                letter++;
 
             }
         }
