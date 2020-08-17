@@ -14,7 +14,7 @@ namespace BattleshipProject
             {
                 for (int column = 0; column < Board.GetLength(1); column++)
                 {
-                    Console.WriteLine(Board[row, column]);
+                    Console.WriteLine($"{Board[row, column]}\n");
 
                 }
             }

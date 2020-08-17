@@ -17,22 +17,24 @@ namespace BattleshipProject
         public GameBoard()
         {
             Board = new string[21, 21]; // [rows, columns]
-            InitializeBoardLabelValues();
             InitializeBoardValues();
+            InitializeBoardLabelValues();
+            
         }
 
         public virtual void InitializeBoardLabelValues()
         {
+            char letter = 'A';
+
             // The "0,0" index should not print any value
-            for (int i = 1; i < 11; i++)// sets column labels 1-10
+            for (int i = 1; i < Board.GetLength(1); i++)// sets column labels 1-20
             {
                 Board[0, i] = string.Concat(i);
 
             }
 
-            for (int i = 1; i < 11; i++)// sets row labels A-J
+            for (int i = 1; i < Board.GetLength(0); i++)// sets row labels A-U
             {
-                char letter = 'A';
                 Board[i, 0] = string.Concat(letter);
                 letter++;
 
@@ -41,10 +43,13 @@ namespace BattleshipProject
 
         public virtual void InitializeBoardValues()
         {
-            for (int i = 1; i < 11; i++)
+            for (int row = 0; row < Board.GetLength(0); row++)
             {
-                Board[i, i] = "-";
+                for (int column = 0; column < Board.GetLength(1); column++)
+                {
+                    Board[row, column] = "-";
 
+                }
             }
         }
 
