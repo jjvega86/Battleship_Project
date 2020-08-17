@@ -22,6 +22,11 @@ namespace BattleshipProject
 
         {
             Player1.ActiveBoard.PrintBoard();
+            Player1.SetPlayerName();
+            Player1.SetShipLocations();
+            Player1.ActiveBoard.PrintBoard();
+
+
         }
 
         public void InitializeValues()// initialize constructor to reset member variable values

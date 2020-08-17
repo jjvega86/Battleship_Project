@@ -33,7 +33,7 @@ namespace BattleshipProject
                 int row = int.Parse(Console.ReadLine());
                 Console.WriteLine("Pick column:");
                 int column = int.Parse(Console.ReadLine());
-                ActiveBoard.Board[row, column] = armada.Fleet[i];
+                ActiveBoard.Board[row, column] = string.Concat(armada.Fleet[i].ShipSpaces);
 
             }
 
