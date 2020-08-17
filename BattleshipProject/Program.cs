@@ -10,6 +10,9 @@ namespace BattleshipProject
     {
         static void Main(string[] args)
         {
+            Game game = new Game();
+            game.RunGame();
+
             //Game Introduction - rules and how to play
             //The game creates two 20 * 20 boards for each player (2 dimensional array)
             //Each player has 4 pieces to place on the game board:
@@ -35,7 +38,7 @@ namespace BattleshipProject
             //GameBoard class that blueprints the 2 dimensional array game boards.
             //      How to create the mirror game board that only shows hits and misses?
             //Player class
-            //      Member variables: int score, Array that stores game pieces (or multiple arrays stored as list objects
+            //      Member variables: int score, GameBoard, Array that stores game pieces (or multiple arrays stored as list objects
             //in a master array). Then I could add the arrays to the game board and they should automatically fill the right
             //number of spaces depending on their size
             //OR: possible classes for each game piece, based on an abstract parent class GamePiece

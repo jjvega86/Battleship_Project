@@ -8,5 +8,28 @@ namespace BattleshipProject
 {
     class Game
     {
+        Player player1;
+        Player player2;
+        //fleet status. Once a player's fleet is empty, game is over
+
+        public Game()
+        {
+            //method will initialize values here
+        }
+
+        public void RunGame()
+        {
+            //orchestrator method, all other Game methods will go here
+        }
+
+        public void InitializeValues()
+        {
+
+        }
+
+        public void GameIntroduction()
+        {
+            //welcome and rules here
+        }
     }
 }
