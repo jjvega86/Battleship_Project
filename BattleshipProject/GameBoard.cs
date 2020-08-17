@@ -16,8 +16,25 @@ namespace BattleshipProject
 
         public GameBoard()
         {
-            board = new string[21, 21];
+            board = new string[21, 21]; // [rows, columns]
+            InitializeBoardLabelValues();
             InitializeBoardValues();
+        }
+
+        public virtual void InitializeBoardLabelValues()
+        {
+            // The "0,0" index should not print any value
+            for (int i = 1; i < 11; i++)// sets column labels 1-10
+            {
+                board[0, i] = string.Concat(i);
+
+            }
+            // How do I "walk" the alphabet every time i increments?
+            for (int i = 1; i < 11; i++)// sets row labels A-J
+            {
+                board[i, 0] = string.Concat(i);
+
+            }
         }
 
         public virtual void InitializeBoardValues()
