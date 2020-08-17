@@ -6,12 +6,14 @@ using System.Threading.Tasks;
 
 namespace BattleshipProject
 {
-    class Submarine
+    class Submarine : Ship
     {
-        //member variables (DOES HAVE)
+        public Submarine()
+        {
+            shipSpaces = new string[2];
 
-        //constructor
+        }
 
-        //member methods (CAN DO)
+       
     }
 }

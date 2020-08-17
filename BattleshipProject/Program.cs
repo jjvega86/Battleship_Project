@@ -13,8 +13,6 @@ namespace BattleshipProject
             Game game = new Game();
             game.RunGame();
 
-
-
     }
     }
 }

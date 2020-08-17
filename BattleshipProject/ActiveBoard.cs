@@ -8,13 +8,13 @@ namespace BattleshipProject
 {
     class ActiveBoard : GameBoard
     {
-        //Full board with ship locations, 
+        // Full board with ship locations, 
 
 
-        //member variables (DOES HAVE)
+        // member variables (DOES HAVE)
 
-        //constructor
+        // constructor
 
-        //member methods (CAN DO)
+        // member methods (CAN DO)
     }
 }

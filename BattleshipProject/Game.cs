@@ -8,19 +8,19 @@ namespace BattleshipProject
 {
     class Game
     {
-        Player player1;
-        Player player2;
-        //fleet status. Once a player's fleet is empty, game is over
-        //could create a counter of some type and boolean check if equals zero
+        public Player Player1;
+        public Player Player2;
+        // fleet status. Once a player's fleet is empty, game is over
+        // could create a counter of some type and boolean check if equals zero
 
         public Game()
         {
-            //method will initialize values here
+            // method will initialize values here
         }
 
         public void RunGame()
         {
-            //orchestrator method, all other Game methods will go here
+            // orchestrator method, all other Game methods will go here
         }
 
         public void InitializeValues()
@@ -30,7 +30,7 @@ namespace BattleshipProject
 
         public void GameIntroduction()
         {
-            //welcome and rules here
+            // welcome and rules here
         }
     }
 }

@@ -8,14 +8,14 @@ namespace BattleshipProject
 {
     public abstract class Ship
     {
-        //parent game piece class
-        //member variables (DOES HAVE)
-        //array that dictates ship size
-        //status (true or false: destroyed?)
+        public string[] shipSpaces;
+        public bool destroyedStatus;
 
-        //constructor
-        //sets a default ship size and status to true
+        public Ship()
+        {
+            shipSpaces = new string[0];
+            destroyedStatus = false;
+        }
 
-        //member methods (CAN DO)
     }
 }

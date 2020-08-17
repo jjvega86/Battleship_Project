@@ -8,12 +8,12 @@ namespace BattleshipProject
 {
     class Fleet
     {
-        //member variables (DOES HAVE)
-        //List of ships
-        //status (List empty or full)
+        // member variables (DOES HAVE)
+        //  List of ships
+        //  status (List empty or full)
 
-        //constructor
+        // constructor
 
-        //member methods (CAN DO)
+        // member methods (CAN DO)
     }
 }
