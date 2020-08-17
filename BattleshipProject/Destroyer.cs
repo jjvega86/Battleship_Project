@@ -10,7 +10,8 @@ namespace BattleshipProject
     {
         public Destroyer()
         {
-            ShipSpaces = new string[1];
+            Name = "Destroyer";
+            ShipSpaces = new string[] { "X ", "X " };
         }
     }
 }

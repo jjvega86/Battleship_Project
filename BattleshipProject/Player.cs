@@ -24,6 +24,12 @@ namespace BattleshipProject
             Fleet = new ShipFleet();
         }
 
+        public void SetShipLocations()
+        {
+            
+
+        }
+
         public void SetPlayerName()
         {
             Console.WriteLine("Please enter your name!");

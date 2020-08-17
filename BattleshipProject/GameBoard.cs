@@ -54,7 +54,7 @@ namespace BattleshipProject
 
         public abstract void PrintBoard();
         // forces child classes to write their own unique printboard logic
-        // ActiveBoard should print everything, StatusBoard should print everything minus ship locations
+        // ActiveBoard should show everything, StatusBoard should show everything minus ship locations
       
        
 
