@@ -14,6 +14,8 @@ namespace BattleshipProject
         public ActiveBoard ActiveBoard;
         public StatusBoard StatusBoard;
         public ShipFleet armada;
+        public int rowSelection;
+        public int columnSelection;
 
         public Player()
         {
@@ -22,6 +24,8 @@ namespace BattleshipProject
             ActiveBoard = new ActiveBoard();
             StatusBoard = new StatusBoard();
             armada = new ShipFleet();
+            rowSelection = 0;
+            columnSelection = 0;
         }
 
         public void SetShipLocations()
@@ -30,13 +34,27 @@ namespace BattleshipProject
             {
                 Console.WriteLine($"Please pick a spot for your {armada.Fleet[i].Name}!");
                 Console.WriteLine("Pick row:");
-                int row = int.Parse(Console.ReadLine());
+                rowSelection = int.Parse(Console.ReadLine());
                 Console.WriteLine("Pick column:");
-                int column = int.Parse(Console.ReadLine());
-                ActiveBoard.Board[row, column] = string.Concat(armada.Fleet[i].ShipSpaces);
+                columnSelection = int.Parse(Console.ReadLine());
+                ValidateShipLocation(rowSelection, columnSelection);
+                ActiveBoard.Board[rowSelection, columnSelection] = string.Concat(armada.Fleet[i].ShipSpaces);
 
             }
+        }
 
+        public void ValidateShipLocation(int row, int column)
+        {
+            if (ActiveBoard.Board[row,column] != "- ")
+            {
+                Console.WriteLine("Please try again!");
+                Console.WriteLine("Pick row:");
+                rowSelection = int.Parse(Console.ReadLine());
+                Console.WriteLine("Pick column:");
+                columnSelection = int.Parse(Console.ReadLine());
+                ValidateShipLocation(rowSelection, columnSelection);
+
+            }
 
         }
 

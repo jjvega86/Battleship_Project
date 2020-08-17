@@ -38,7 +38,7 @@ namespace BattleshipProject
             {
                 for (int column = 0; column < Board.GetLength(1); column++)
                 {
-                    Board[row, column] = "- ";
+                    Board[row, column] = "-" + " ";
 
                 }
             }
