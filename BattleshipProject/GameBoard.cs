@@ -27,15 +27,15 @@ namespace BattleshipProject
             char letter = 'A';
 
             // The "0,0" index should not print any value
-            for (int i = 1; i < Board.GetLength(1); i++)// sets column labels 1-20
+            for (int i = 0; i < Board.GetLength(1); i++)// sets column labels 1-20
             {
-                Board[0, i] = string.Concat(i);
+                Board[0, i] = string.Concat(i + " ");
 
             }
 
             for (int i = 1; i < Board.GetLength(0); i++)// sets row labels A-U
             {
-                Board[i, 0] = string.Concat(letter);
+                Board[i, 0] = string.Concat(letter + " ");
                 letter++;
             }
         }
@@ -46,7 +46,7 @@ namespace BattleshipProject
             {
                 for (int column = 0; column < Board.GetLength(1); column++)
                 {
-                    Board[row, column] = "-";
+                    Board[row, column] = "- ";
 
                 }
             }
