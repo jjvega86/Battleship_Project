@@ -8,9 +8,8 @@ namespace BattleshipProject
 {
     public abstract class GameBoard
     {
-        // member variables (DOES HAVE)
         // 2d array 21 * 21
-        //  includes both labels A-J, 1-10 and the game spaces themselves
+     
 
         public string[,] Board;
 
@@ -46,15 +45,25 @@ namespace BattleshipProject
 
         public virtual void PrintBoard()
         {
-            for (int row = 0; row < Board.GetLength(0); row++)
+            // i want to print the entire player board on the console
+            // i want the entire first row to print, then the next row, and so on
+            // the final result will be a 20 by 20 grid in alignment so the player can select
+            // hit locations and ship locations
+
+            int row = 0;
+
+            while (row < Board.GetLength(0))
             {
-                for (int column = 0; column < Board.GetLength(1); column++)
+                for (int column = 0; column < Board.GetLength(0); column++)
                 {
                     Console.Write(Board[row, column]);
 
                 }
+                row++;
+                Console.WriteLine();
             }
 
+            
         }
         
 
