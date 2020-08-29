@@ -47,7 +47,7 @@ namespace BattleshipProject
 
         public void ValidateShipLocation(int row, int column)
         { 
-            if (ActiveBoard.Board[row,column] != "- ")
+            if (ActiveBoard.Board[row,column] != "-")
             {
                 rowSelection = UserInterface.GetUserInputInt("Invalid selection. Please pick a row:\n");
                 columnSelection = UserInterface.GetUserInputInt("Please pick a column:\n");

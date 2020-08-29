@@ -26,8 +26,19 @@ namespace BattleshipProject
 
             for (int i = 0; i < Board.GetLength(1); i++)// sets column and row labels 1-20
             {
-                Board[0, i] = string.Concat(i + " ");
-                Board[i, 0] = string.Concat(i + " ");
+                if (i < 10)
+                {
+                    Board[0, i] = string.Concat("0" + i + " ");
+                    Board[i, 0] = string.Concat("0" + i + " ");
+
+                }
+                else
+                {
+                    Board[0, i] = string.Concat(i + " ");
+                    Board[i, 0] = string.Concat(i + " ");
+
+                }
+                
             }
         }
 
@@ -37,7 +48,7 @@ namespace BattleshipProject
             {
                 for (int column = 0; column < Board.GetLength(1); column++)
                 {
-                    Board[row, column] = "-" + " ";
+                    Board[row, column] = "-" + " " + " ";
 
                 }
             }
@@ -45,11 +56,6 @@ namespace BattleshipProject
 
         public virtual void PrintBoard()
         {
-            // i want to print the entire player board on the console
-            // i want the entire first row to print, then the next row, and so on
-            // the final result will be a 20 by 20 grid in alignment so the player can select
-            // hit locations and ship locations
-
             int row = 0;
 
             while (row < Board.GetLength(0))
