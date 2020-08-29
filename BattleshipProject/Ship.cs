@@ -10,6 +10,7 @@ namespace BattleshipProject
     {
         public string Name;
         public string[] ShipSpaces;
+        public int OrientationCode; // 0 is default, 1 is horizontal, 2 is vertical
         public bool DestroyedStatus;
 
         public Ship()
@@ -17,6 +18,7 @@ namespace BattleshipProject
             Name = "Default";
             ShipSpaces = new string[] { "> " };
             DestroyedStatus = false;
+            OrientationCode = 0;
         }
 
     }

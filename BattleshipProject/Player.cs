@@ -32,26 +32,25 @@ namespace BattleshipProject
         {
             for (int i = 0; i < armada.Fleet.Length; i++)
             {
-                Console.WriteLine($"Please pick a spot for your {armada.Fleet[i].Name}!");
-                Console.WriteLine("Pick row:");
-                rowSelection = int.Parse(Console.ReadLine());
-                Console.WriteLine("Pick column:");
-                columnSelection = int.Parse(Console.ReadLine());
+                rowSelection = UserInterface.GetUserInputInt($"Pick a row for your {armada.Fleet[i].Name}!\n");
+                columnSelection = UserInterface.GetUserInputInt($"Pick a column for your {armada.Fleet[i].Name}!\n");                          
                 ValidateShipLocation(rowSelection, columnSelection);
                 ActiveBoard.Board[rowSelection, columnSelection] = string.Concat(armada.Fleet[i].ShipSpaces);
 
             }
         }
 
+        public void SetShipDirection()
+        {
+            //use to set vertical or horizontal orientation of ship
+        }
+
         public void ValidateShipLocation(int row, int column)
         { 
             if (ActiveBoard.Board[row,column] != "- ")
             {
-                Console.WriteLine("Please try again!");
-                Console.WriteLine("Pick row:");
-                rowSelection = int.Parse(Console.ReadLine());
-                Console.WriteLine("Pick column:");
-                columnSelection = int.Parse(Console.ReadLine());
+                rowSelection = UserInterface.GetUserInputInt("Invalid selection. Please pick a row:\n");
+                columnSelection = UserInterface.GetUserInputInt("Please pick a column:\n");
                 ValidateShipLocation(rowSelection, columnSelection);
 
             }
@@ -60,17 +59,13 @@ namespace BattleshipProject
 
         public void SetPlayerName()
         {
-            Console.WriteLine("Please enter your name!");
-            Name = Console.ReadLine();
+            Name = UserInterface.GetUserInputString("Please enter your name!\n");
         }
 
         public void ChooseHitLocation(ActiveBoard activeBoard)
         {
-            Console.WriteLine("Choose where you want to hit!");
-            Console.WriteLine("Pick row:");
-            rowSelection = int.Parse(Console.ReadLine());
-            Console.WriteLine("Pick column:");
-            columnSelection = int.Parse(Console.ReadLine());
+            rowSelection = UserInterface.GetUserInputInt("Pick the row of your hit!\n");
+            columnSelection = UserInterface.GetUserInputInt("Pick the column of your hit!\n");
             activeBoard.Board[rowSelection, columnSelection] = "X";
 
         }

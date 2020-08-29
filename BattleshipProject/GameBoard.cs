@@ -53,7 +53,6 @@ namespace BattleshipProject
                     Console.Write(Board[row, column]);
 
                 }
-                Console.WriteLine("");
             }
 
         }
