@@ -11,7 +11,7 @@ namespace BattleshipProject
         public Destroyer()
         {
             Name = "Destroyer";
-            ShipSpaces = new string[] { "> ", "> " };
+            ShipSize = 2;
         }
     }
 }

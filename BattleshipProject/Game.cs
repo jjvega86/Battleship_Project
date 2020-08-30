@@ -21,12 +21,12 @@ namespace BattleshipProject
         public void RunGame()// orchestrator method, all other Game methods will go here
 
         {
-            Player1.ActiveBoard.PrintBoard();
+            Player1.VisibleBoard.PrintBoard();
             Player1.SetPlayerName();
             Player1.SetShipLocations();
-            Player1.ActiveBoard.PrintBoard();
-            Player1.ChooseHitLocation(Player1.ActiveBoard);
-            Player1.ActiveBoard.PrintBoard();
+            Player1.VisibleBoard.PrintBoard();
+            Player1.ChooseHitLocation(Player1.HiddenBoard);
+            Player1.VisibleBoard.PrintBoard();
 
 
         }

@@ -11,7 +11,7 @@ namespace BattleshipProject
         public AircraftCarrier()
         {
             Name = "Aircraft Carrier";
-            ShipSpaces = new string[] { "> ", "> ", "> ", "> ", "> " };
+            ShipSize = 5;
 
         }
     }

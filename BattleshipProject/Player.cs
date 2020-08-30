@@ -36,8 +36,31 @@ namespace BattleshipProject
                 columnSelection = UserInterface.GetUserInputInt($"Pick a column for your {armada.Fleet[i].Name}!");
                 SetShipDirection(armada.Fleet[i]);
                 ValidateShipLocation(rowSelection, columnSelection);
-                VisibleBoard.Board[rowSelection, columnSelection] = string.Concat(armada.Fleet[i].ShipSpaces);
+                AddShipToBoard(armada.Fleet[i]);
                 VisibleBoard.PrintBoard();
+
+            }
+        }
+
+        public void AddShipToBoard(Ship ship)
+        {
+            if (ship.OrientationCode == 1)
+            {
+                for (int i = 0; i < ship.ShipSize; i++)
+                {
+                    VisibleBoard.Board[rowSelection, columnSelection] = ">";
+                    columnSelection += 1;
+
+                }
+            }
+            else
+            {
+                for (int i = 0; i < ship.ShipSize; i++)
+                {
+                    VisibleBoard.Board[rowSelection, columnSelection] = "^";
+                    rowSelection += 1;
+
+                }
 
             }
         }
