@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace BattleshipProject
 {
-    class ActiveBoard : GameBoard
+    class HiddenBoard : GameBoard
     {
-        //board with all contents visible, including ship locations
+        //board that shows hit attempts, hits, and destroyed ships, but not ship locations
 
     }
 }

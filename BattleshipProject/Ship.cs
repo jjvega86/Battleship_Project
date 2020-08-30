@@ -16,7 +16,7 @@ namespace BattleshipProject
         public Ship()
         {
             Name = "Default";
-            ShipSpaces = new string[] { "> " };
+            ShipSpaces = new string[] { ">" };
             DestroyedStatus = false;
             OrientationCode = 0;
         }

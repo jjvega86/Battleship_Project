@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace BattleshipProject
 {
-    class StatusBoard : GameBoard
+    class VisibleBoard : GameBoard
     {
-        //partial board with destroyed ship locations, hit attempts, hit successes
+        //fully visible board with current ship locations, hit attempts, hits, etc
 
         
     }

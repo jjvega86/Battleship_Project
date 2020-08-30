@@ -11,8 +11,8 @@ namespace BattleshipProject
     {
         public int Score;
         public string Name;
-        public ActiveBoard ActiveBoard;
-        public StatusBoard StatusBoard;
+        public HiddenBoard HiddenBoard;
+        public VisibleBoard VisibleBoard;
         public ShipFleet armada;
         public int rowSelection;
         public int columnSelection;
@@ -21,8 +21,8 @@ namespace BattleshipProject
         {
             Name = "Player";
             Score = 0;
-            ActiveBoard = new ActiveBoard();
-            StatusBoard = new StatusBoard();
+            HiddenBoard = new HiddenBoard();
+            VisibleBoard = new VisibleBoard();
             armada = new ShipFleet();
             rowSelection = 0;
             columnSelection = 0;
@@ -32,25 +32,29 @@ namespace BattleshipProject
         {
             for (int i = 0; i < armada.Fleet.Length; i++)
             {
-                rowSelection = UserInterface.GetUserInputInt($"Pick a row for your {armada.Fleet[i].Name}!\n");
-                columnSelection = UserInterface.GetUserInputInt($"Pick a column for your {armada.Fleet[i].Name}!\n");                          
+                rowSelection = UserInterface.GetUserInputInt($"Pick a row for your {armada.Fleet[i].Name}!");
+                columnSelection = UserInterface.GetUserInputInt($"Pick a column for your {armada.Fleet[i].Name}!");
+                SetShipDirection(armada.Fleet[i]);
                 ValidateShipLocation(rowSelection, columnSelection);
-                ActiveBoard.Board[rowSelection, columnSelection] = string.Concat(armada.Fleet[i].ShipSpaces);
+                VisibleBoard.Board[rowSelection, columnSelection] = string.Concat(armada.Fleet[i].ShipSpaces);
+                VisibleBoard.PrintBoard();
 
             }
         }
 
-        public void SetShipDirection()
+        public void SetShipDirection(Ship ship)
         {
             //use to set vertical or horizontal orientation of ship
+            ship.OrientationCode = UserInterface.GetUserInputInt("Which direction would you like your ship to go? (1 for horizontal, 2 for vertical)");
+
         }
 
         public void ValidateShipLocation(int row, int column)
         { 
-            if (ActiveBoard.Board[row,column] != "-")
+            if (VisibleBoard.Board[row,column].Contains(">"))
             {
-                rowSelection = UserInterface.GetUserInputInt("Invalid selection. Please pick a row:\n");
-                columnSelection = UserInterface.GetUserInputInt("Please pick a column:\n");
+                rowSelection = UserInterface.GetUserInputInt("Invalid selection. Please pick a row:");
+                columnSelection = UserInterface.GetUserInputInt("Please pick a column:");
                 ValidateShipLocation(rowSelection, columnSelection);
 
             }
@@ -62,7 +66,7 @@ namespace BattleshipProject
             Name = UserInterface.GetUserInputString("Please enter your name!\n");
         }
 
-        public void ChooseHitLocation(ActiveBoard activeBoard)
+        public void ChooseHitLocation(HiddenBoard activeBoard)
         {
             rowSelection = UserInterface.GetUserInputInt("Pick the row of your hit!\n");
             columnSelection = UserInterface.GetUserInputInt("Pick the column of your hit!\n");

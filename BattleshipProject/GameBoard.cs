@@ -24,8 +24,9 @@ namespace BattleshipProject
         public virtual void InitializeBoardLabelValues()
         {
 
-            for (int i = 0; i < Board.GetLength(1); i++)// sets column and row labels 1-20
+            for (int i = 1; i < Board.GetLength(1); i++)// sets column and row labels 1-20
             {
+                
                 if (i < 10)
                 {
                     Board[0, i] = string.Concat("0" + i + " ");
